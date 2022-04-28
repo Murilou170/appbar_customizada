@@ -9,7 +9,12 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-   TabController? _tabController;
+   /*TabController? _tabController;
+   int _selectedScreenIndex = 0;
+   final List<Widget> _screens = [
+     favoriteScreen(),
+     perfilScreen(),
+   ];*/
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +27,7 @@ class _HomeState extends State<Home> {
           bottom: TabBar(
             indicatorWeight: 2,
             labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            controller: _tabController,
+            //controller: _tabController,
             tabs: [
               Tab(
                 icon: Icon(Icons.airline_seat_individual_suite),
@@ -35,18 +40,32 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        body: Container(
-          child: TabBarView(
-            children: [
-              Container(
-                color: Colors.red,
-              ),
-              Container(
-                color: Colors.green,
-              )
-            ],
-          ),
-        )
+        body: TabBarView(
+          children: [
+            Container(
+              color: Colors.red,
+            ),
+            Container(
+              color: Colors.green,
+            )
+          ],
+        ),
+        /*bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Theme.of(context).primaryColor,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.star),
+              label: 'Favoritos'
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: 'Você'
+            ),
+
+
+          ],
+        ),*/
+
       ),
     );
   }

@@ -10,8 +10,15 @@ class Escolha2 extends StatefulWidget {
 class _Escolha2State extends State<Escolha2> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('escolha 2')
+    return Scaffold(
+      backgroundColor: Colors.amberAccent,
+      body: Container(
+        child: Container(
+          child: Center(
+            child: Text('olá mundo'),
+          ),
+        ),
+      ),
     );
   }
 }
